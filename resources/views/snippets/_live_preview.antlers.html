@@ -4,7 +4,7 @@
 #}}
 
 {{ if live_preview }}
-    <!-- statamic-peak-tools::snippets/_live_preview.antlers.html -->
+    <!-- statamic-vanilla-peak-tools::snippets/_live_preview.antlers.html -->
     <script>
         window.addEventListener('message', async (event) => {
             if (event.data.name === 'statamic.preview.updated') {
@@ -15,5 +15,5 @@
             }
         });
     </script>
-    <!-- End: statamic-peak-tools::snippets/_live_preview.antlers.html -->
+    <!-- End: statamic-vanilla-peak-tools::snippets/_live_preview.antlers.html -->
 {{ /if }}

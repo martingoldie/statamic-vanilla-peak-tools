@@ -28,7 +28,7 @@ class ServiceProvider extends AddonServiceProvider
     protected function registerPublishableViews()
     {
         $this->publishes([
-            __DIR__ . '/../resources/views' => resource_path('views/vendor/statamic-peak-tools'),
-        ], 'statamic-peak-tools-views');
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/statamic-vanilla-peak-tools'),
+        ], 'statamic-vanilla-peak-tools-views');
     }
 }

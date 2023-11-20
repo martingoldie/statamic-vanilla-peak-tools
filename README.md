@@ -13,7 +13,7 @@ Maintaining Peak demands a lot of my time and it probably saves you a lot. Your 
 This addon is automatically installed when you install Peak via the Statamic CLI. If you want to install this addon manually on an older Peak install run:
 
 ``` bash
-composer require studio1902/statamic-peak-tools
+composer require studio1902/statamic-vanilla-peak-tools
 ```
 
 You will have to manually remove all files installed with this addon.

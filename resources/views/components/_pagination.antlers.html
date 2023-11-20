@@ -1,10 +1,10 @@
 {{#
     @name Pagination
-    @desc The pagination component. Include in a result set using `{{ partial:statamic-peak-tools::components/pagination }}`.
+    @desc The pagination component. Include in a result set using `{{ partial:statamic-vanilla-peak-tools::components/pagination }}`.
     Auto adds pagination links to `statamic-peak-seo::snippets/_seo.antlers.html`.
 #}}
 
-<!-- statamic-peak-tools::components/_pagination.antlers.html -->
+<!-- statamic-vanilla-peak-tools::components/_pagination.antlers.html -->
 {{ if paginate.total_pages > 1 }}
     <div class="{{ class }}">
         {{ paginate }}
@@ -43,4 +43,4 @@
         {{ /paginate }}
     </div>
 {{ /if }}
-<!-- End: statamic-peak-tools::components/_pagination.antlers.html -->
+<!-- End: statamic-vanilla-peak-tools::components/_pagination.antlers.html -->
