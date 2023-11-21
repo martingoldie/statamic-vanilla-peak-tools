@@ -99,7 +99,7 @@
         >
             <span title="Current breakpoint" class="peak-toolbar__current-breakpoint">
                 {{ svg:breakpoint alt="" aria-hidden="true" }}
-                <div x-on:resize.window="windowWidth = window.innerWidth" x-data="{windowWidth: window.innerWidth}">
+                <div x-on:resize.window.debounce="windowWidth = window.innerWidth" x-data="{windowWidth: window.innerWidth}">
                     <div x-text="`${windowWidth}px`"></div>
                 </div>
             </span>
