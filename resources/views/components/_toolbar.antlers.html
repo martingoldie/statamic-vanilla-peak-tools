@@ -98,7 +98,9 @@
         >
             <span title="Current breakpoint" class="peak-toolbar__current-breakpoint">
                 {{ svg:breakpoint alt="" aria-hidden="true" }}
-                <span class="breakpoint"></span>
+                <div x-on:resize.window="windowWidth = window.innerWidth" x-data="{windowWidth: window.innerWidth}">
+                    <div x-text="`${windowWidth}px`"></div>
+                </div>
             </span>
 
             {{ if logged_in == true }}
