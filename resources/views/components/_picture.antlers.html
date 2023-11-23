@@ -46,7 +46,7 @@
             {{ if extension == 'svg' || extension == 'gif' }}
                 <img
                     {{ if cover }}
-                        class="object-cover w-full h-full {{ class }}"
+                        class="u-object-fit-cover {{ class }}"
                         style="object-position: {{ focus | background_position }}"
                     {{ else }}
                         class="{{ class }}"
@@ -127,7 +127,7 @@
                     }}"
                     alt="{{ alt | ensure_right('.') | entities }}"
                     {{ if cover }}
-                        class="object-cover w-full h-full {{ class }}"
+                        class="u-object-fit-cover {{ class }}"
                         style="object-position: {{ focus | background_position }}"
                     {{ else }}
                         class="{{ class }}"
