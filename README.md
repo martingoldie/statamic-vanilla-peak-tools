@@ -2,9 +2,9 @@
 
 # Statamic Peak Tools
 
-This is an addon for [Statamic Peak](https://github.com/studio1902/statamic-peak) that contains tools like the CSRF token logic, picture partial, the noscript partial, the pagination partial, the toolbar and the missing alt text widget.
+This is an addon for [Statamic Vanilla Peak](https://github.com/jaygeorge/statamic-vanilla-peak) that contains tools like the CSRF token logic, picture partial, the noscript partial, the pagination partial, the toolbar and the missing alt text widget.
 
-Maintaining Peak demands a lot of my time and it probably saves you a lot. Your sponsoring would mean a great deal to me as it makes it much easier for me to maintain this project and keep improving it. [Sponsor me](https://github.com/sponsors/studio1902).
+Maintaining Peak demands a lot of Rob's time and it probably saves you a lot. Sponsoring Rob makes it much easier for him to maintain this project and keep improving it. [Sponsor me](https://github.com/sponsors/studio1902).
 
 [Read the docs](https://peak.1902.studio).
 
@@ -13,7 +13,7 @@ Maintaining Peak demands a lot of my time and it probably saves you a lot. Your 
 This addon is automatically installed when you install Peak via the Statamic CLI. If you want to install this addon manually on an older Peak install run:
 
 ``` bash
-composer require studio1902/statamic-vanilla-peak-tools
+composer require jaygeorge/statamic-vanilla-peak-tools
 ```
 
 You will have to manually remove all files installed with this addon.
