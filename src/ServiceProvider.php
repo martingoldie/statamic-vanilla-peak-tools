@@ -8,16 +8,16 @@ use Studio1902\PeakTools\Listeners\UpdateImagesMissingAltCacheListener;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    protected $routes = [
-        'actions' => __DIR__ . '/../routes/actions.php',
-    ];
-
     protected $subscribe = [
         UpdateImagesMissingAltCacheListener::class,
     ];
 
     protected $widgets = [
         ImagesMissingAlt::class
+    ];
+
+    protected $updateScripts = [
+        \Studio1902\PeakTools\Updates\UpdateFormJSDriver::class,
     ];
 
     public function bootAddon()

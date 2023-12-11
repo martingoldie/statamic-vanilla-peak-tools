@@ -1,5 +1,18 @@
 # Changelog
 
+## v4.0.1 (2023-12-04)
+
+### What's fixed
+- Fix statamic conditionals not working #14 by @AndreasSchantl
+
+### What's new
+- An update script to automatically update the JS driver in the form partial. a5e7f9bc and f23504fb by @robdekort
+
+## v4.0.0 (2023-12-01)
+
+### What's new
+- Breaking change: Laravel Precognition support. Removes the old style form handler. Don't upgrade to this version if you don't manually change your templates according to [this PR](https://github.com/studio1902/statamic-peak/pull/359). #13 by @robdekort
+
 ## v3.4.3 (2023-11-21)
 
 ### What's improved
