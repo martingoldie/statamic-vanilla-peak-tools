@@ -1,5 +1,36 @@
 # Changelog
 
+## v4.1.0 (2023-12-12)
+
+### What's new
+- Add button attributes partial to this addon. An update script will automatically fix references . 6a2e513d by @robdekort
+- Button tags should not use default link behaviour. 6a2e513d by @mikemartin.
+
+## v4.0.5 (2023-12-10)
+
+### What's improved
+- Handle CSRF tokens more elegant. fe52f063 by @ryanmitchell
+
+## v4.0.5 (2023-12-10)
+
+### What's improved
+- Handle CSRF tokens more elegant. fe52f063 by @ryanmitchell
+
+## v4.0.4 (2023-12-09)
+
+### What's fixed
+- Expired token errors when using forms with static caching. 6f4255ce by @robdekort
+
+## v4.0.3 (2023-12-08)
+
+### What's improved
+- Only show form error summary after submission. d85a58a1 by @robdekort
+
+## v4.0.2 (2023-12-07)
+
+### What's improved
+- Add an update script to auto [fix form fields](https://github.com/studio1902/statamic-peak/releases/tag/v16.1.2). 6a054e7b by @robdekort
+
 ## v4.0.1 (2023-12-04)
 
 ### What's fixed
