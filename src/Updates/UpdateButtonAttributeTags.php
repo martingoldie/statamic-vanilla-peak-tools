@@ -26,11 +26,11 @@ class UpdateButtonAttributeTags extends UpdateScript
             })
             ->each(function ($file) use ($disk) {
                 $contents = Str::of($disk->get($file))
-                    ->replace("partial:snippets/button_attributes", "partial:statamic-peak-tools::snippets/button_attributes" );
+                    ->replace("partial:snippets/button_attributes", "partial:statamic-vanilla-peak-tools::snippets/button_attributes" );
 
                 $disk->put($file, $contents);
 
-                $this->console()->info("Replaced `partial:snippets/button_attributes` with `partial:statamic-peak-tools::snippets/button_attributes` in `$file`.");
+                $this->console()->info("Replaced `partial:snippets/button_attributes` with `partial:statamic-vanilla-peak-tools::snippets/button_attributes` in `$file`.");
             }
         );
 
