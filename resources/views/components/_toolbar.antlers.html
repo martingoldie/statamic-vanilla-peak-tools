@@ -83,7 +83,7 @@
         .peak-toolbar--visible {
             opacity: 1;
         }
-        .peak-toolbar--invisible {
+        .peak-toolbar--invisible:not(:has(:is(button, a):focus)) {
             opacity: 0;
         }
         </style>
