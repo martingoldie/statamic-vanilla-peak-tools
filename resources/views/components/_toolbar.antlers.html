@@ -13,10 +13,6 @@
             right: 0.25rem;
             bottom: 0.25rem;
             z-index: 50;
-            {{# border-left-width: 1px; #}}
-            {{# border-color: #ffffff; #}}
-            {{# border-style: solid; #}}
-            {{# font-size: 0.75rem; #}}
             font-size: 1rem;
             box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
             opacity: 1;
@@ -95,15 +91,15 @@
             x-cloak
         >
             <span title="Current breakpoint" class="peak-toolbar__current-breakpoint">
-                {{ svg:breakpoint alt="" aria-hidden="true" }}
-                <div x-on:resize.window.debounce="windowWidth = window.innerWidth" x-data="{windowWidth: window.innerWidth}">
-                    <div x-text="`${windowWidth}px`"></div>
-                </div>
+                {{ svg:breakpoint aria-hidden="true" }}
+                <span x-on:resize.window.debounce="windowWidth = window.innerWidth" x-data="{windowWidth: window.innerWidth}">
+                    <span x-text="`${windowWidth}px`"></span>
+                </span>
             </span>
 
             {{ if logged_in == true }}
                 <a href="{{ edit_url }}" title="Edit entry in CP" aria-label="Edit entry in CP" target="_blank" class="peak-toolbar__edit">
-                    {{ svg:edit alt="" aria-hidden="true" }}
+                    {{ svg:edit aria-hidden="true" }}
                     <span>Edit</span>
                 </a>
             {{ /if }}
@@ -112,19 +108,19 @@
                 @click="toolbarVisible = !toolbarVisible"
                 title="Toggle toolbar visibility" aria-label="Toggle toolbar visibility" class="peak-toolbar__toggle-visibility"
             >
-                <div x-show="!toolbarVisible">
-                    {{ svg:invisible class="peak-toolbar__visibility" alt="" aria-hidden="true" }}
-                </div>
-                <div x-show="toolbarVisible">
-                    {{ svg:visible class="peak-toolbar__visibility" alt="" aria-hidden="true" }}
-                </div>
+                <span x-show="!toolbarVisible">
+                    {{ svg:invisible class="peak-toolbar__visibility" aria-hidden="true" }}
+                </span>
+                <span x-show="toolbarVisible">
+                    {{ svg:visible class="peak-toolbar__visibility" aria-hidden="true" }}
+                </span>
             </button>
 
             <button
                 @click="$refs.toolbar.remove()"
                 title="Remove toolbar" aria-label="Remove toolbar" class="peak-toolbar__remove"
             >
-                {{ svg:trash class="peak-toolbar__trash" alt="" aria-hidden="true" }}
+                {{ svg:trash class="peak-toolbar__trash" aria-hidden="true" }}
             </button>
         </aside>
     {{ /nocache }}
