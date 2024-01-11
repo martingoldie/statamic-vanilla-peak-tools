@@ -77,8 +77,9 @@
                                 :sharpen="sharpen"
                                 fit="crop_focal"
                                 format="webp"
+                                dpr="2"
                                 quality="{ quality ?? '85' }"
-                            }} {{ size:width }}w{{ !last ?= ',' }}
+                            }} {{ size:width * 2 }}w{{ !last ?= ',' }}
                         {{ /srcset }}
                     "
                     sizes="{{ sizes ?? '(min-width: 1280px) 640px, (min-width: 768px) 50vw, 90vw' }}"
@@ -102,7 +103,7 @@
                                 fit="crop_focal"
                                 quality="{ quality ?? '85' }"
                             }}
-                            {{ size:width }}w{{ !last ?= ',' }}
+                            {{ size:width * 2 }}w{{ !last ?= ',' }}
                         {{ /srcset }}
                     "
                     sizes="{{ sizes ?? '(min-width: 1280px) 640px, (min-width: 768px) 50vw, 90vw' }}"
