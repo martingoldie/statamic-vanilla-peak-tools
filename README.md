@@ -1,6 +1,6 @@
 <img class="margin-bottom: 1rem;" src="https://cdn.studio1902.nl/assets/statamic-peak/statamic-peak-logo.png?v=4" width="220" alt="Statamic Peak Logo" />
 
-# Statamic Peak Tools
+# Statamic Vanilla Peak Tools
 
 This is an addon for [Statamic Vanilla Peak](https://github.com/jaygeorge/statamic-vanilla-peak) that contains tools like the picture partial, the noscript partial, the pagination partial, the toolbar and the missing alt text widget.
 

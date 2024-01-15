@@ -34,6 +34,6 @@ class UpdateButtonAttributeTags extends UpdateScript
             }
         );
 
-        $this->console()->info("You can delete the `views/snippets/_button_attributes.antlers.html` partial as it is now pulled in from the Statamic Peak Tools addon.");
+        $this->console()->info("You can delete the `views/snippets/_button_attributes.antlers.html` partial as it is now pulled in from the Statamic Vanailla Peak Tools addon.");
     }
 }
