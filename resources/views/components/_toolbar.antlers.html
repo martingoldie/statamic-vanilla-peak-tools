@@ -3,126 +3,47 @@
     @desc The Peak toolbar component displaying debug information.
 #}}
 
-<!-- statamic-vanilla-peak-tools::components/_toolbar.antlers.html -->
+<!-- statamic-peak-tools::components/_toolbar.antlers.html -->
 {{ if environment == 'local' }}
     {{ nocache }}
-    <style>
-        .peak-toolbar {
-            display: flex;
-            position: fixed;
-            right: 0.25rem;
-            bottom: 0.25rem;
-            z-index: 50;
-            font-size: 1rem;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            opacity: 1;
-
-            /* Extra */
-            gap: 1px;
-            background: white;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
-            &:hover {
-                opacity: 1;
-            }
-
-            svg {
-                width: 1.25em;
-                height: 1.25em;
-                fill: currentColor;
-            }
-
-            button {
-                display: flex;
-                padding-inline: 0.5rem;
-                justify-content: center;
-                align-items: center;
-                background-color: #E5E7EB;
-
-                &:hover {
-                    background-color: #D1D5DB;
-                }
-            }
-
-            .peak-toolbar__trash {
-                width: 1rem;
-                height: 1rem;
-                color: #92400E;
-                stroke: currentColor;
-            }
-        }
-        .peak-toolbar__current-breakpoint {
-            display: flex;
-            gap: 0.4rem;
-            padding: 0.5rem 0.75rem;
-            align-items: center;
-            color: #92400E;
-            background-color: #FDE68A;
-            font-size: 0.85em;
-            svg {
-                width: 0.9rem;
-                height: 0.9rem;
-            }
-        }
-        .peak-toolbar__edit {
-            display: flex;
-            padding: 0.5rem;
-            margin-left: 0.25rem;
-            align-items: center;
-            color: #1F2937;
-            background-color: #E5E7EB;
-
-            &:hover {
-                background-color: #D1D5DB;
-            }
-        }
-        .peak-toolbar--visible {
-            opacity: 1;
-        }
-        .peak-toolbar--invisible:not(:has(:is(button, a):focus)) {
-            opacity: 0;
-        }
-        </style>
         <aside
-            class="peak-toolbar"
+            class="fixed z-50 bottom-1 right-1 flex text-xs divide-x divide-white shadow-sm divide-solid motion-safe:transition-opacity hover:opacity-100 has-[button:focus,a:focus]:opacity-100"
             x-data="{ toolbarVisible: $persist(true).as('toolbarVisible') }"
             x-ref="toolbar"
-            :class="{ 'peak-toolbar--visible': toolbarVisible, 'peak-toolbar--invisible': !toolbarVisible }"
+            :class="{ 'opacity-100': toolbarVisible, 'opacity-0': !toolbarVisible }"
             x-cloak
         >
-            <span title="Current breakpoint" class="peak-toolbar__current-breakpoint">
-                {{ svg:breakpoint aria-hidden="true" }}
-                <span x-on:resize.window.debounce="windowWidth = window.innerWidth" x-data="{windowWidth: window.innerWidth}">
-                    <span x-text="`${windowWidth}px`"></span>
-                </span>
+            <span title="Current Tailwind breakpoint" class="flex items-center p-2 space-x-1 text-yellow-800 bg-yellow-200">
+                {{ svg:breakpoint attr:class="w-4 h-4 fill-current" attr:alt="" attr:aria-hidden="true" }}
+                <span class="breakpoint"></span>
             </span>
 
-            {{ if logged_in == true }}
-                <a href="{{ edit_url }}" title="Edit entry in CP" aria-label="Edit entry in CP" target="_blank" class="peak-toolbar__edit">
-                    {{ svg:edit aria-hidden="true" }}
+            {{ if logged_in }}
+                <a href="{{ edit_url }}" title="Edit entry in CP" aria-label="Edit entry in CP" target="_blank" class="flex items-center p-2 space-x-1 text-gray-800 bg-gray-200 hover:bg-gray-300">
+                    {{ svg:edit attr:class="w-4 h-4 fill-current" attr:alt="" attr:aria-hidden="true" }}
                     <span>Edit</span>
                 </a>
             {{ /if }}
 
             <button
                 @click="toolbarVisible = !toolbarVisible"
-                title="Toggle toolbar visibility" aria-label="Toggle toolbar visibility" class="peak-toolbar__toggle-visibility"
+                title="Toggle toolbar visibility" aria-label="Toggle toolbar visibility" class="flex items-center justify-center px-2 bg-gray-200 hover:bg-gray-300"
             >
-                <span x-show="!toolbarVisible">
-                    {{ svg:invisible class="peak-toolbar__visibility" aria-hidden="true" }}
-                </span>
-                <span x-show="toolbarVisible">
-                    {{ svg:visible class="peak-toolbar__visibility" aria-hidden="true" }}
-                </span>
+                <div x-show="!toolbarVisible">
+                    {{ svg:invisible attr:class="w-5 h-5 fill-current" attr:alt="" attr:aria-hidden="true" }}
+                </div>
+                <div x-show="toolbarVisible">
+                    {{ svg:visible attr:class="w-5 h-5 fill-current" attr:alt="" attr:aria-hidden="true" }}
+                </div>
             </button>
 
             <button
                 @click="$refs.toolbar.remove()"
-                title="Remove toolbar" aria-label="Remove toolbar" class="peak-toolbar__remove"
+                title="Remove toolbar" aria-label="Remove toolbar" class="flex items-center justify-center px-2 bg-gray-200 hover:bg-gray-300"
             >
-                {{ svg:trash class="peak-toolbar__trash" aria-hidden="true" }}
+                {{ svg:trash attr:class="w-4 h-4 text-yellow-800 stroke-current" attr:alt="" attr:aria-hidden="true" }}
             </button>
         </aside>
     {{ /nocache }}
 {{ /if }}
-<!-- End: statamic-vanilla-peak-tools::components/_toolbar.antlers.html -->
+<!-- End: statamic-peak-tools::components/_toolbar.antlers.html -->

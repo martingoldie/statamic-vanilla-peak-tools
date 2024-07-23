@@ -28,8 +28,12 @@
                         }
                     )
                 },
-                succesHook() {
+                successHook(response) {
                     {{ success_hook }}
+
+                    setTimeout(() => {
+                        this.success = false
+                    }, 4500)
                 },
                 submit() {
                     this.submitted = true
@@ -39,14 +43,17 @@
                             this.$refs.form.reset()
                             this.success = true
                             this.submitted = false
-                            this.succesHook()
-                            setTimeout(() => {
-                                this.success = false
-                            }, 4500)
+                            this.successHook(response)
                         })
                         .then(this.$refs.form.scrollIntoView())
                         .catch(error => {
-                            this.$focus.focus(document.querySelector('#summary').querySelector('a'))
+                            const summary = document.querySelector('#summary')
+                            if (summary) {
+                                this.$focus.focus(summary.querySelector('a'))
+                            }
+                            else {
+                                console.log(error)
+                            }
                         })
                 }
             }))
