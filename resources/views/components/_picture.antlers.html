@@ -22,7 +22,7 @@
     @param quality int Set image quality. Defaults to 85.
 #}}
 
-<!-- statamic-peak-tools::components/_picture.antlers.html -->
+<!-- statamic-vanilla-peak-tools::components/_picture.antlers.html -->
 {{ if image }}
     {{ asset :url="image" }}
         {{# Configure aspect ratio's. #}}
@@ -42,7 +42,7 @@
         {{ srcset = null }}
 
         {{# Set srcset sizes. #}}
-        {{ partial src="{ srcset_from ?: 'statamic-peak-tools::snippets/srcset_default' }" }}
+        {{ partial src="{ srcset_from ?: 'statamic-vanilla-peak-tools::snippets/srcset_default' }" }}
 
         {{# Image formats. #}}
         {{ formats = ['webp' => 'image/webp', 'jpg' => 'image/jpeg'] }}
@@ -130,4 +130,4 @@
         </picture>
     {{ /asset }}
 {{ /if }}
-<!-- End: statamic-peak-tools::components/_picture.antlers.html -->
+<!-- End: statamic-vanilla-peak-tools::components/_picture.antlers.html -->

@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio1902\PeakTools\Updates;
+namespace Goldie\PeakTools\Updates;
 
 use Statamic\Support\Arr;
 use Illuminate\Support\Facades\File;

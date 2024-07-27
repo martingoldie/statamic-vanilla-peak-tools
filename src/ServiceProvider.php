@@ -1,13 +1,13 @@
 <?php
 
-namespace Studio1902\PeakTools;
+namespace Goldie\PeakTools;
 
 use Illuminate\Support\Facades\View;
 use Statamic\Statamic;
 use Statamic\Facades\GlobalSet;
 use Statamic\Providers\AddonServiceProvider;
-use Studio1902\PeakTools\Widgets\ImagesMissingAlt;
-use Studio1902\PeakTools\Listeners\UpdateImagesMissingAltCacheListener;
+use Goldie\PeakTools\Widgets\ImagesMissingAlt;
+use Goldie\PeakTools\Listeners\UpdateImagesMissingAltCacheListener;
 
 class ServiceProvider extends AddonServiceProvider
 {
@@ -20,13 +20,13 @@ class ServiceProvider extends AddonServiceProvider
     ];
 
     protected $updateScripts = [
-        \Studio1902\PeakTools\Updates\UpdateFormJSDriver::class,
-        \Studio1902\PeakTools\Updates\UpdateFormFields::class,
-        \Studio1902\PeakTools\Updates\UpdateFormErrorHandling::class,
-        \Studio1902\PeakTools\Updates\UpdateButtonAttributeTags::class,
-        \Studio1902\PeakTools\Updates\UpdateImagesBlueprintWithExemptToggle::class,
-        \Studio1902\PeakTools\Updates\UpdateHoneypotField::class,
-        \Studio1902\PeakTools\Updates\AddTrackerEventsField::class,
+        \Goldie\PeakTools\Updates\UpdateFormJSDriver::class,
+        \Goldie\PeakTools\Updates\UpdateFormFields::class,
+        \Goldie\PeakTools\Updates\UpdateFormErrorHandling::class,
+        \Goldie\PeakTools\Updates\UpdateButtonAttributeTags::class,
+        \Goldie\PeakTools\Updates\UpdateImagesBlueprintWithExemptToggle::class,
+        \Goldie\PeakTools\Updates\UpdateHoneypotField::class,
+        \Goldie\PeakTools\Updates\AddTrackerEventsField::class,
     ];
 
     protected $vite = [

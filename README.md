@@ -2,7 +2,7 @@
 
 # Statamic Vanilla Peak Tools
 
-This is an addon for [Statamic Vanilla Peak](https://github.com/jaygeorge/statamic-vanilla-peak) that contains tools like the picture partial, the noscript partial, the pagination partial, the toolbar and the missing alt text widget.
+This is an addon for [Statamic Vanilla Peak](https://github.com/martingoldie/statamic-vanilla-peak) that contains tools like the picture partial, the noscript partial, the pagination partial, the toolbar and the missing alt text widget.
 
 Maintaining Peak demands a lot of Rob's time and it probably saves you a lot. Sponsoring Rob makes it much easier for him to maintain this project and keep improving it. [Sponsor Peak](https://github.com/sponsors/studio1902).
 
@@ -13,7 +13,7 @@ Maintaining Peak demands a lot of Rob's time and it probably saves you a lot. Sp
 This addon is automatically installed when you install Peak via the Statamic CLI. If you want to install this addon manually on an older Peak install run:
 
 ``` bash
-composer require jaygeorge/statamic-vanilla-peak-tools
+composer require martingoldie/statamic-vanilla-peak-tools
 ```
 
 You will have to manually remove all files installed with this addon.

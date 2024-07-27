@@ -1,6 +1,6 @@
 <?php
 
-namespace Studio1902\PeakTools\Updates;
+namespace Goldie\PeakTools\Updates;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;

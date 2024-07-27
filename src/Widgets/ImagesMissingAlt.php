@@ -1,10 +1,10 @@
 <?php
 
-namespace Studio1902\PeakTools\Widgets;
+namespace Goldie\PeakTools\Widgets;
 
 use Statamic\Facades\AssetContainer;
 use Statamic\Widgets\Widget;
-use Studio1902\PeakTools\Services\Service;
+use Goldie\PeakTools\Services\Service;
 
 class ImagesMissingAlt extends Widget
 {

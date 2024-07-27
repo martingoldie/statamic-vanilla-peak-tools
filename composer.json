@@ -1,8 +1,8 @@
 {
-    "name": "jaygeorge/statamic-vanilla-peak-tools",
+    "name": "martingoldie/statamic-vanilla-peak-tools",
     "autoload": {
         "psr-4": {
-            "Studio1902\\PeakTools\\": "src"
+            "Goldie\\PeakTools\\": "src"
         }
     },
     "extra": {
@@ -12,11 +12,16 @@
         },
         "laravel": {
             "providers": [
-                "Studio1902\\PeakTools\\ServiceProvider"
+                "Goldie\\PeakTools\\ServiceProvider"
             ]
         }
     },
     "require": {
         "statamic/cms": "^4.0 || ^5.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
     }
 }
