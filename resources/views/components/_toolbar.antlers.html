@@ -7,20 +7,20 @@
 {{ if environment == 'local' }}
     {{ nocache }}
         <aside
-            class="fixed z-50 bottom-1 right-1 flex text-xs divide-x divide-white shadow-sm divide-solid motion-safe:transition-opacity hover:opacity-100 has-[button:focus,a:focus]:opacity-100"
+            class="gtw-fixed gtw-z-50 gtw-bottom-1 gtw-right-1 gtw-flex gtw-text-xs gtw-divide-x gtw-divide-white gtw-shadow-sm gtw-divide-solid motion-safe:gtw-transition-opacity hover:gtw-opacity-100 has-[button:focus,a:focus]:gtw-opacity-100"
             x-data="{ toolbarVisible: $persist(true).as('toolbarVisible') }"
             x-ref="toolbar"
-            :class="{ 'opacity-100': toolbarVisible, 'opacity-0': !toolbarVisible }"
+            :class="{ 'gtw-opacity-100': toolbarVisible, 'gtw-opacity-0': !toolbarVisible }"
             x-cloak
         >
-            <span title="Current Tailwind breakpoint" class="flex items-center p-2 space-x-1 text-yellow-800 bg-yellow-200">
-                {{ svg:breakpoint attr:class="w-4 h-4 fill-current" attr:alt="" attr:aria-hidden="true" }}
+            <span title="Current Tailwind breakpoint" class="gtw-flex gtw-items-center gtw-p-2 gtw-space-x-1 gtw-text-yellow-800 gtw-bg-yellow-200">
+                {{ svg:breakpoint attr:class="gtw-w-4 gtw-h-4 gtw-fill-current" attr:alt="" attr:aria-hidden="true" }}
                 <span class="breakpoint"></span>
             </span>
 
             {{ if logged_in }}
                 <a href="{{ edit_url }}" title="Edit entry in CP" aria-label="Edit entry in CP" target="_blank" class="flex items-center p-2 space-x-1 text-gray-800 bg-gray-200 hover:bg-gray-300">
-                    {{ svg:edit attr:class="w-4 h-4 fill-current" attr:alt="" attr:aria-hidden="true" }}
+                    {{ svg:edit attr:class="gtw-w-4 gtw-h-4 gtw-fill-current" attr:alt="" attr:aria-hidden="true" }}
                     <span>Edit</span>
                 </a>
             {{ /if }}
@@ -30,18 +30,18 @@
                 title="Toggle toolbar visibility" aria-label="Toggle toolbar visibility" class="flex items-center justify-center px-2 bg-gray-200 hover:bg-gray-300"
             >
                 <div x-show="!toolbarVisible">
-                    {{ svg:invisible attr:class="w-5 h-5 fill-current" attr:alt="" attr:aria-hidden="true" }}
+                    {{ svg:invisible attr:class="gtw-w-5 gtw-h-5 gtw-fill-current" attr:alt="" attr:aria-hidden="true" }}
                 </div>
                 <div x-show="toolbarVisible">
-                    {{ svg:visible attr:class="w-5 h-5 fill-current" attr:alt="" attr:aria-hidden="true" }}
+                    {{ svg:visible attr:class="gtw-w-5 gtw-h-5 gtw-fill-current" attr:alt="" attr:aria-hidden="true" }}
                 </div>
             </button>
 
             <button
                 @click="$refs.toolbar.remove()"
-                title="Remove toolbar" aria-label="Remove toolbar" class="flex items-center justify-center px-2 bg-gray-200 hover:bg-gray-300"
+                title="Remove toolbar" aria-label="Remove toolbar" class="gtw-flex gtw-items-center gtw-justify-center gtw-px-2 gtw-bg-gray-200 hover:gtw-bg-gray-300"
             >
-                {{ svg:trash attr:class="w-4 h-4 text-yellow-800 stroke-current" attr:alt="" attr:aria-hidden="true" }}
+                {{ svg:trash attr:class="gtw-w-4 gtw-h-4 gtw-text-yellow-800 gtw-stroke-current" attr:alt="" attr:aria-hidden="true" }}
             </button>
         </aside>
     {{ /nocache }}
