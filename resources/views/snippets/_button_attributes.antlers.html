@@ -15,8 +15,8 @@
 {{ target_blank ?= 'rel="noopener" target="_blank"' }}
 {{ attr_title ?= 'title="{{ attr_title }}"' }}
 {{ attr_aria ?= 'aria-label="{{ attr_aria }}"' }}
-{{ if environment == 'production' && seo:trackers_production && tracker_event }}
-    {{ if seo:use_fathom }}
+{{ if environment == 'production' && seogoldie:trackers_production && tracker_event }}
+    {{ if seogoldie:use_fathom }}
         onclick="fathom.trackEvent('{{ tracker_event }}')"
     {{ /if }}
     {{ if tracker_type === 'gtag' || tracker_type === 'gtm' }}
