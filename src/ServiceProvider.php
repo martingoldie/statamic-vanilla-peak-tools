@@ -49,7 +49,7 @@ class ServiceProvider extends AddonServiceProvider
 
             Statamic::provideToScript([
                 'use_fathom' => GlobalSet::findByHandle('seogoldie')->inDefaultSite()->get('use_fathom'),
-                'use_google' => GlobalSet::findByHandle('seogoldie')->inDefaultSite()->get('tracker_type') === 'gtm' || GlobalSet::findByHandle('seogoldie)->inDefaultSite()->get('tracker_type') === 'gtag',
+                'use_google' => GlobalSet::findByHandle('seogoldie')->inDefaultSite()->get('tracker_type') === 'gtm' || GlobalSet::findByHandle('seogoldie')->inDefaultSite()->get('tracker_type') === 'gtag',
             ]);
         });
     }
